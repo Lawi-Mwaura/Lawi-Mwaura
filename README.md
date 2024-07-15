@@ -8,13 +8,15 @@ Welcome to my portfolio! Here are some of my projects:
 
 ## Projects
 
-### Modern CarShowcase(https://modern-carshowcase.vercel.app/)
+### Modern Car Showcase (https://modern-carshowcase.vercel.app/)
 
 ### Movie App Interface (https://movie-app-interface-phi.vercel.app/)
 
 ### FlatDango (https://flat-dango-pi.vercel.app/)
 
-### Travel Bucket List (https://movie-app-interface-phi.vercel.app/)
+### Travel Bucket List (https://travel-bucket-list-bice.vercel.app/)
+
+### [Crisis Control East Africa](https://www.crisiscontroleastafrica.co.ke/) 
 
 
 
