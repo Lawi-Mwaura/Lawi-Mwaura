@@ -12,7 +12,7 @@ Welcome to my portfolio! Here are some of my projects:
 
 ### [Movie App Interface](https://movie-app-interface-phi.vercel.app/)
 
-### [Crisis Control East Africa](https://www.crisiscontroleastafrica.co.ke/) 
+
 
 
 
