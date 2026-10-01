@@ -2,7 +2,9 @@
   <img src="assets/lawi-mwaura.svg" width="100%" alt="Lawi Mwaura. Full-stack and mobile engineering. Web platforms, mobile applications, and the systems behind them." />
 </p>
 
-I’m **Lawi Mwaura**, a full-stack and mobile engineer based in Kenya. I build across web interfaces, mobile applications, backend integrations, and data consistency. My current work is **I-soco** and **Maly**.
+I’m **Lawi Mwaura**, a full-stack and mobile engineer based in Kenya. My flagship projects, **I-soco** and **Maly**, tackle repeated external events, interrupted data ingestion, and session isolation.
+
+**TypeScript · Next.js · React Native · PostgreSQL**
 
 **Open to senior full-stack and product engineering roles at startups.**
 
@@ -21,6 +23,8 @@ The difficult part is keeping the interface and persisted state consistent when 
 **Engineering focus:** idempotency · reconciliation · access boundaries · recovery UX · coordinated releases
 
 **Stack:** TypeScript, Next.js, React, Supabase, PostgreSQL
+
+**Validation:** 13 selected reliability and security checks passed. The case study explains what those checks establish and what still needs live-system verification.
 
 **[Read the system design →](https://github.com/Lawi-Mwaura/I-soco-showcase)**
 
@@ -42,6 +46,8 @@ The engineering challenge is turning inconsistent device messages into useful re
 
 **Stack:** TypeScript, React Native, Expo, Supabase, TanStack Query, Zustand
 
+**Validation:** 55 tests passed across parser, inbox recovery, user-state cleanup, authentication, and PIN storage suites, using fixtures and mocked device boundaries.
+
 **[Read the system design →](https://github.com/Lawi-Mwaura/Maly-showcase)**
 
 ## Supporting projects
@@ -52,14 +58,6 @@ The engineering challenge is turning inconsistent device messages into useful re
 | [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase) | Public forms, content workflows, administrative access boundaries. | TypeScript, Next.js, React, Supabase, Resend, Tiptap |
 | [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase) | Storefront state, data queries, runtime input validation. | TypeScript, Next.js, React, Supabase, TanStack Query, Zod |
 
-## What I bring to a team
-
-| Area | Evidence in these projects |
-| :--- | :--- |
-| System design | Explicit boundaries between UI state, trusted server operations, and durable records. |
-| Reliability | Replayed events, delayed callbacks, failed scans, and recovery paths treated as design inputs. |
-| Data protection | Restricted browser access, user-scoped cleanup, and separate authentication decisions. |
-| Delivery | Regression tests and compatibility checks across application code and database changes. |
-| Product engineering | Interfaces that explain state and give users a concrete next action after failure. |
+Shenachafiber also provides inspectable source and **27 passing tests** across validation, notification formatting, and enquiry-route suites. The case studies explain failure conditions, invariants, implementation choices, and remaining operational questions.
 
 I-soco, Maly, Catherine Gathoni, and Always Organic have private source repositories. Shenachafiber provides public source. The case studies cover engineering decisions and sanitized interfaces; proprietary commercial logic is omitted.
