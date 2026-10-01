@@ -6,13 +6,13 @@ I’m **Lawi Mwaura**, a full-stack and mobile engineer based in Kenya. I build 
 
 **Open to senior full-stack and product engineering roles at startups.**
 
-[LinkedIn](https://www.linkedin.com/in/lawi-mwaura/) · [Email](mailto:lawimwaura@gmail.com) · [Engineering documentation](case-studies/README.md)
+[Email](mailto:lawimwaura@gmail.com) · [Engineering documentation](case-studies/README.md)
 
 ## 01 / I-soco
 
 **A marketplace application with a focus on reliable asynchronous workflows.**
 
-<a href="case-studies/isoco.md"><img src="assets/isoco-discovery.jpg" width="100%" alt="I-soco discovery interface: search, navigation, and a row of product cards. Sanitized interface excerpt." /></a>
+<a href="https://github.com/Lawi-Mwaura/I-soco-showcase"><img src="assets/isoco-discovery.jpg" width="100%" alt="I-soco discovery interface: search, navigation, and a row of product cards. Sanitized interface excerpt." /></a>
 
 <sub>Actual interface excerpt. Seller identities, amounts, and commercial details are excluded.</sub>
 
@@ -22,16 +22,16 @@ The difficult part is keeping the interface and persisted state consistent when 
 
 **Stack:** TypeScript, Next.js, React, Supabase, PostgreSQL
 
-**[Read the system design →](case-studies/isoco.md)**
+**[Read the system design →](https://github.com/Lawi-Mwaura/I-soco-showcase)**
 
 ## 02 / Maly
 
 **A mobile personal finance application with on-device transaction ingestion.**
 
 <p align="center">
-  <a href="case-studies/maly.md"><img src="assets/maly-welcome.jpg" width="38%" alt="Maly welcome screen, captured from the actual interface in an isolated portfolio preview." /></a>
+  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-welcome.jpg" width="38%" alt="Maly welcome screen, captured from the actual interface in an isolated portfolio preview." /></a>
   &nbsp;&nbsp;
-  <a href="case-studies/maly.md"><img src="assets/maly-budget.jpg" width="38%" alt="Maly spending plan screen with clearly labeled sample data." /></a>
+  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-budget.jpg" width="38%" alt="Maly spending plan screen with clearly labeled sample data." /></a>
 </p>
 
 <sub>Actual application components rendered in an isolated preview. All financial values are sample data.</sub>
@@ -42,7 +42,15 @@ The engineering challenge is turning inconsistent device messages into useful re
 
 **Stack:** TypeScript, React Native, Expo, Supabase, TanStack Query, Zustand
 
-**[Read the system design →](case-studies/maly.md)**
+**[Read the system design →](https://github.com/Lawi-Mwaura/Maly-showcase)**
+
+## Supporting projects
+
+| Project | Engineering focus | Technologies |
+| :--- | :--- | :--- |
+| [Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber) | Validated enquiries, durable storage, notification failure handling. | TypeScript, Next.js, React, PostgreSQL, Vitest |
+| [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase) | Public forms, content workflows, administrative access boundaries. | TypeScript, Next.js, React, Supabase, Resend, Tiptap |
+| [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase) | Storefront state, data queries, runtime input validation. | TypeScript, Next.js, React, Supabase, TanStack Query, Zod |
 
 ## What I bring to a team
 
@@ -54,4 +62,4 @@ The engineering challenge is turning inconsistent device messages into useful re
 | Delivery | Regression tests and compatibility checks across application code and database changes. |
 | Product engineering | Interfaces that explain state and give users a concrete next action after failure. |
 
-Source repositories are private. These public case studies cover engineering decisions and sanitized interfaces; proprietary commercial logic is omitted.
+I-soco, Maly, Catherine Gathoni, and Always Organic have private source repositories. Shenachafiber provides public source. The case studies cover engineering decisions and sanitized interfaces; proprietary commercial logic is omitted.

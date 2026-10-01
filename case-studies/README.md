@@ -6,6 +6,9 @@ Selected work by [Lawi Mwaura](https://github.com/Lawi-Mwaura).
 | :--- | :--- | :--- |
 | [I-soco](isoco.md) | Web marketplace | Transaction boundaries, idempotency, reconciliation, and safe release coordination. |
 | [Maly](maly.md) | Mobile personal finance | Message parsing, recoverable ingestion, cache lifecycle, and mobile authentication. |
+| [Shenachafiber](shenachafiber.md) | Enquiry website | Persistence versus notification delivery, input validation, and recovery. |
+| [Catherine Gathoni](catherine-gathoni.md) | Content and administration | Public-form handling and privileged access boundaries. |
+| [Always Organic](always-organic.md) | Storefront | Client state, server-data caching, and integration contracts. |
 
 Each document includes actual interface captures, a simplified architecture, concrete failure cases, tradeoffs, and the scope of validation. The diagrams show public component responsibilities, rather than a deployment map or proprietary schema.
 
