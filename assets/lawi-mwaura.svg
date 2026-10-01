@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">Lawi Mwaura — Full-stack and mobile engineering</title>
+  <desc id="desc">Web platforms, mobile applications, and the systems behind them.</desc>
+  <rect width="1200" height="330" fill="#132c35"/>
+  <rect x="0" y="0" width="9" height="330" fill="#32bcad"/>
+  <text x="60" y="64" font-family="Arial,Helvetica,sans-serif" font-size="16" letter-spacing="4" fill="#8fdacf">ENGINEERING PORTFOLIO</text>
+  <text x="57" y="153" font-family="Georgia,serif" font-size="70" fill="#fbf7ef">Lawi Mwaura</text>
+  <text x="60" y="207" font-family="Arial,Helvetica,sans-serif" font-size="27" fill="#fbf7ef">Full-stack &amp; mobile engineering</text>
+  <text x="60" y="258" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#b9cdd1">Web platforms, mobile applications, and the systems behind them.</text>
+  <path d="M1000 66v56h75v72h-124v61h151" fill="none" stroke="#32bcad" stroke-width="2"/>
+  <path d="M1075 122h55v133" fill="none" stroke="#527a80" stroke-width="2"/>
+  <g fill="#132c35" stroke="#8fdacf" stroke-width="2"><circle cx="1000" cy="66" r="8"/><circle cx="1075" cy="122" r="8"/><circle cx="951" cy="194" r="8"/><circle cx="1102" cy="255" r="8"/></g>
+</svg>
