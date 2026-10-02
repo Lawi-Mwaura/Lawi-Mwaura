@@ -158,23 +158,6 @@ These are supporting libraries identified in direct project dependencies, not se
 
 **Evidence:** source-reviewed design and public web captures; no complete test run in this review.
 
-### [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase)
-
-**Problem statement.** People browsing a personal-care collection need clear product information, an understandable selection process and a cart that preserves their choices as they navigate. Always Organic provides a storefront for product discovery and shopping interactions.
-
-**Engineering challenge.** Storefront state and external-service results need separate lifecycles. Cart state, server queries, runtime validation, and empty-state behavior.
-
-**Technologies:** TypeScript · Next.js · React · Tailwind CSS · Supabase / PostgreSQL · TanStack Query · Zod · Resend · Framer Motion · Axios · Leaflet / React Leaflet · Lucide / React Icons · Sonner · Jest · Testing Library
-
-<p align="center">
-  <a href="assets/always-organic.jpg"><img src="assets/always-organic.jpg" width="32%" alt="Always Organic: public homepage excerpt" /></a>
-  <a href="assets/organic-cart.jpg"><img src="assets/organic-cart.jpg" width="63%" alt="Always Organic: empty shopping bag" /></a>
-</p>
-
-<sub>Home · Empty shopping bag. Actual public interface captures; no purchase or populated cart is implied. Open an image for detail.</sub>
-
-**Evidence:** source-reviewed design and public web captures; existing component tests were not run in this review.
-
 Each project README includes interface screenshots, a system diagram, challenges, outcomes, and a clearly scoped evidence section.
 
 ## Education
