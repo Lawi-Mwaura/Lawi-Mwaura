@@ -12,6 +12,6 @@ Selected work by [Lawi Mwaura](https://github.com/Lawi-Mwaura).
 
 Each document includes actual interface captures, a simplified architecture, concrete failure cases, tradeoffs, and the scope of validation. The diagrams show public component responsibilities, rather than a deployment map or proprietary schema.
 
-I-soco, Maly, Catherine Gathoni, and Always Organic source repositories remain private. Shenachafiber provides public source. Interface images are sanitized or rendered with sample data. The documents exclude commercial rules, customer records, credentials, and private infrastructure identifiers.
+Private source references: [I-soco](https://github.com/Lawi-Mwaura/i-soco), [Maly](https://github.com/Lawi-Mwaura/maly), [Catherine Gathoni](https://github.com/Lawi-Mwaura/catherine), and [Always Organic](https://github.com/Lawi-Mwaura/always-organic). Only authorized collaborators can open these repositories; public visitors may see a 404. Shenachafiber provides public source. Interface images are sanitized or rendered with sample data. The documents exclude commercial rules, customer records, credentials, and private infrastructure identifiers.
 
 [Back to profile](https://github.com/Lawi-Mwaura)

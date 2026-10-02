@@ -4,17 +4,21 @@
 
 [Profile](../README.md) · [Documentation index](README.md) · [Maly](maly.md)
 
-![I-soco product discovery](../assets/isoco-discovery.jpg)
+**Private source repository:** [Lawi-Mwaura/i-soco](https://github.com/Lawi-Mwaura/i-soco). Access is limited to authorized collaborators; GitHub may show a 404 to public visitors.
 
 [Problem](#problem-statement) · [System design](#system-design) · [Gallery](#web-interface-gallery) · [Evidence](#metrics-and-evidence)
 
 ## Problem statement
 
-External callbacks can repeat, arrive late, and conflict with a previous result. The application needs one consistent persisted outcome and a useful recovery path when completion is uncertain.
+People using a time-limited marketplace need to discover products, follow changing listing states and understand whether their actions completed. An unclear or contradictory result can leave someone unsure whether to wait, retry or seek help. I-soco provides product discovery and visible workflow states around those interactions.
+
+**Engineering challenge.** External callbacks can repeat, arrive late, and conflict with a previous result. The application needs one consistent persisted outcome and a useful recovery path when completion is uncertain.
+
+![I-soco product discovery](../assets/isoco-discovery.jpg)
 
 ## Technologies used
 
-TypeScript · Next.js · React · Supabase · PostgreSQL
+TypeScript · JavaScript · Next.js · React · Tailwind CSS · Supabase Auth / Database / Edge Functions / Storage · PostgreSQL · Drizzle ORM · Zod · Radix UI / shadcn/ui · Grafana Faro · Docker · IntaSend · Playwright · Node.js test runner
 
 ## Engineering scope
 
@@ -139,6 +143,6 @@ Request context, optional reference, and explicit contact consent. Phone fields 
 
 I can walk through the consistency boundary, why duplicate delivery differs from duplicate effects, how late events affect a state machine, and how recovery behavior reaches the interface. The public overview deliberately excludes proprietary commercial logic.
 
-**Stack:** TypeScript · Next.js · React · Supabase · PostgreSQL
+**Stack:** TypeScript · JavaScript · Next.js · React · Tailwind CSS · Supabase Auth / Database / Edge Functions / Storage · PostgreSQL · Drizzle ORM · Zod · Radix UI / shadcn/ui · Grafana Faro · Docker · IntaSend · Playwright · Node.js test runner
 
 [Contact Lawi](mailto:lawimwaura@gmail.com) · [Back to profile](../README.md)
