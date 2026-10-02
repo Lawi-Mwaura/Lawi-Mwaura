@@ -85,11 +85,29 @@ I build web and mobile applications with particular attention to what happens wh
 
 ## More project work
 
-| Project | Problem & implemented outcome | Technologies | Evidence |
-| :--- | :--- | :--- | :--- |
-| [Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber) | Enquiries must survive notification failures. Storage determines success; delivery errors are handled separately. | Next.js, TypeScript, React, Neon / PostgreSQL, Resend, Vitest | Public source; **27 tests passed** across three selected suites. |
-| [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase) | Public forms and administration need different trust boundaries. Input validation, persistence-first contact handling, and server-side admin checks. | Next.js, TypeScript, React, Tailwind CSS, Supabase, Resend, Tiptap, Zod, Sentry | Source-reviewed design and public web captures; no complete test run in this review. |
-| [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase) | Storefront state and external-service results need separate lifecycles. Cart state, server queries, runtime validation, and empty-state behavior. | Next.js, TypeScript, React, Tailwind CSS, Supabase, TanStack Query, Zod, Resend, Framer Motion | Source-reviewed design and public web captures; existing component tests were not run in this review. |
+### [Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber)
+
+**Problem / outcome:** enquiries must survive notification failures. Storage determines success; delivery errors are handled separately.
+
+**Technologies:** Next.js · TypeScript · React · Neon / PostgreSQL · Resend · Vitest
+
+**Evidence:** public source; **27 selected tests passed** across three suites.
+
+### [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase)
+
+**Problem / outcome:** public forms and administration need different trust boundaries. Input validation, persistence-first contact handling, and server-side administration checks.
+
+**Technologies:** Next.js · TypeScript · React · Tailwind CSS · Supabase · Resend · Tiptap · Zod · Sentry
+
+**Evidence:** source-reviewed design and public web captures; no complete test run in this review.
+
+### [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase)
+
+**Problem / outcome:** storefront state and external-service results need separate lifecycles. Cart state, server queries, runtime validation, and empty-state behavior.
+
+**Technologies:** Next.js · TypeScript · React · Tailwind CSS · Supabase · TanStack Query · Zod · Resend · Framer Motion
+
+**Evidence:** source-reviewed design and public web captures; existing component tests were not run in this review.
 
 Each project README includes interface screenshots, a system diagram, challenges, outcomes, and a clearly scoped evidence section.
 
