@@ -4,13 +4,14 @@
 
 TypeScript · JavaScript · Next.js · React Native · Kotlin · PostgreSQL
 
-I'm a full stack engineer and a Software Engineer and Consultant at **Quantum Technologies** (December 2023 to present). I build web applications and REST APIs with Next.js, Supabase and PostgreSQL, and mobile applications with React Native, Expo and Kotlin. I work with clients, product managers and designers to turn system constraints into feasible features.
+I build web applications, APIs and mobile products, with engineering experience at **Quantum Technologies** and a QA background at **Testbirds**.
 
-My part-time QA work at **Testbirds** (April 2019 to December 2025) informs how I test APIs, investigate defects and handle failure cases. **I-soco** and **Maly** lead this portfolio, with screenshots and technical documentation explaining their architecture, implementation decisions and verification.
-
-**Seeking mid-level full stack engineering roles, with a particular interest in startups.**
+**Seeking mid-level full stack engineering roles.**
 
 [Email me](mailto:lawimwaura@gmail.com) · [Technical documentation](case-studies/README.md) · [Public source: Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber)
+
+<details>
+<summary><strong>All technologies & tools</strong> · web, native Android, backend, cloud, testing and monitoring</summary>
 
 ## Technologies & tools
 
@@ -31,12 +32,12 @@ These technologies come from my updated résumé and the project source reviewed
 | API testing & QA tooling | Postman, Jira, Boxcryptor (authorized pre-release testing) |
 | Development tooling | OpenAI Codex, TypeScript tooling, ESLint, Babel, PostCSS |
 
-<details>
-<summary><strong>Additional project libraries</strong></summary>
+### Supporting project libraries
 
 The selected repositories also include Axios, React Navigation, NetInfo, Gesture Handler, React Native Screens, Safe Area Context, React Native SVG, React Native Web, React Native Wagmi Charts, date-fns, Lucide, Phosphor Icons, React Icons, Expo Vector Icons, Sonner, next-themes, cmdk, class-variance-authority, tailwind-merge, tw-animate-css, Lightning CSS, Autoprefixer, Simple Icons, parse5, and Fontsource / Expo Google Fonts. Expo modules cover notifications, background tasks, updates, haptics, images, linking, fonts, splash screens, device information and secure storage.
 
 These are supporting libraries identified in direct project dependencies, not separate claims of specialist expertise.
+
 
 </details>
 
@@ -48,9 +49,18 @@ These are supporting libraries identified in direct project dependencies, not se
 
 **Engineering challenge.** External events can repeat, arrive late, or contradict an earlier response. Persisted state and the user interface must converge without applying a durable effect twice.
 
-[![I-soco product discovery interface](assets/isoco-discovery.jpg)](https://github.com/Lawi-Mwaura/I-soco-showcase)
+<p align="center">
+  <a href="assets/isoco-discovery.jpg"><img src="assets/isoco-discovery.jpg" width="57%" alt="I-soco: discovery with actual products" /></a>
+  <a href="assets/isoco-notifications.jpg"><img src="assets/isoco-notifications.jpg" width="31%" alt="I-soco: notifications" /></a>
+</p>
 
-<sub>Actual web interface with real product images. Sanitized excerpt; private commercial details are excluded.</sub>
+<p align="center">
+  <a href="assets/isoco-signin.jpg"><img src="assets/isoco-signin.jpg" width="12%" alt="I-soco: sign-in" /></a>
+  <a href="assets/isoco-signup.jpg"><img src="assets/isoco-signup.jpg" width="12%" alt="I-soco: account creation" /></a>
+  <a href="assets/isoco-support.jpg"><img src="assets/isoco-support.jpg" width="36%" alt="I-soco: support using a QA example address" /></a>
+</p>
+
+<sub>Product discovery · Notifications · Sign-in · Account creation · Support. Sanitized source QA captures. Open any screenshot for detail.</sub>
 
 **Technologies.** TypeScript · JavaScript · Next.js · React · Tailwind CSS · Supabase · PostgreSQL · Drizzle ORM · Zod · Grafana Faro · Docker · IntaSend · Playwright
 
@@ -80,12 +90,14 @@ These are supporting libraries identified in direct project dependencies, not se
 **Engineering challenge.** Device messages are inconsistent, inbox reads can stop midway, and cached financial data must be cleared when sessions change.
 
 <p align="center">
-  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-welcome-native.png" width="38%" alt="Maly welcome screen running in an Android phone emulator." /></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-budget-native.png" width="38%" alt="Maly spending plan running in an Android phone emulator with labeled sample data." /></a>
+  <a href="assets/maly-welcome-native.png"><img src="assets/maly-welcome-native.png" width="16%" alt="Maly: welcome" /></a>
+  <a href="assets/maly-goals-native.png"><img src="assets/maly-goals-native.png" width="16%" alt="Maly: goals" /></a>
+  <a href="assets/maly-signin-native.png"><img src="assets/maly-signin-native.png" width="16%" alt="Maly: sign-in" /></a>
+  <a href="assets/maly-budget-native.png"><img src="assets/maly-budget-native.png" width="16%" alt="Maly: spending plan with synthetic sample data" /></a>
+  <a href="assets/maly-transaction-native.png"><img src="assets/maly-transaction-native.png" width="16%" alt="Maly: blank transaction entry" /></a>
 </p>
 
-<sub>Native Android emulator captures of actual application components. Sample data and isolated backend fixtures.</sub>
+<sub>Welcome · Goals · Sign-in · Spending plan · Transaction entry. Actual Android emulator captures with synthetic fixtures. Open any screenshot for detail.</sub>
 
 **Technologies.** TypeScript · React Native · Expo / EAS · Expo Router · Kotlin · Android SDK · Supabase · PostgreSQL · Node.js · TanStack Query · Zustand · AsyncStorage / SecureStore · NativeWind · GitHub Actions · Grafana Faro · Sentry · Jest
 
@@ -118,6 +130,14 @@ These are supporting libraries identified in direct project dependencies, not se
 
 **Technologies:** TypeScript · Next.js · React · Neon / PostgreSQL · Resend · Phosphor Icons · Simple Icons · Vitest · Playwright
 
+<p align="center">
+  <a href="assets/shenachafiber.jpg"><img src="assets/shenachafiber.jpg" width="31%" alt="Shenachafiber: homepage" /></a>
+  <a href="assets/shenacha-about.jpg"><img src="assets/shenacha-about.jpg" width="31%" alt="Shenachafiber: About page" /></a>
+  <a href="assets/shenacha-help.jpg"><img src="assets/shenacha-help.jpg" width="31%" alt="Shenachafiber: support page excerpt" /></a>
+</p>
+
+<sub>Home · About · Help. Existing source QA captures, shown as public interface excerpts. Open an image for detail.</sub>
+
 **Evidence:** public source; **27 selected tests passed** across three suites.
 
 ### [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase)
@@ -128,6 +148,14 @@ These are supporting libraries identified in direct project dependencies, not se
 
 **Technologies:** TypeScript · Next.js · React · Tailwind CSS · Supabase Auth / PostgreSQL · Resend · Tiptap · React Hook Form · Zod · Sentry · Vercel Analytics · MDX · Lenis
 
+<p align="center">
+  <a href="assets/catherine-gathoni.jpg"><img src="assets/catherine-gathoni.jpg" width="31%" alt="Catherine Gathoni: homepage" /></a>
+  <a href="assets/catherine-about.jpg"><img src="assets/catherine-about.jpg" width="31%" alt="Catherine Gathoni: About page" /></a>
+  <a href="assets/catherine-journal.jpg"><img src="assets/catherine-journal.jpg" width="31%" alt="Catherine Gathoni: Journal page excerpt" /></a>
+</p>
+
+<sub>Home · About · Journal. Public web captures; About and Journal captured on 2 October 2026. Open an image for detail.</sub>
+
 **Evidence:** source-reviewed design and public web captures; no complete test run in this review.
 
 ### [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase)
@@ -137,6 +165,13 @@ These are supporting libraries identified in direct project dependencies, not se
 **Engineering challenge.** Storefront state and external-service results need separate lifecycles. Cart state, server queries, runtime validation, and empty-state behavior.
 
 **Technologies:** TypeScript · Next.js · React · Tailwind CSS · Supabase / PostgreSQL · TanStack Query · Zod · Resend · Framer Motion · Axios · Leaflet / React Leaflet · Lucide / React Icons · Sonner · Jest · Testing Library
+
+<p align="center">
+  <a href="assets/always-organic.jpg"><img src="assets/always-organic.jpg" width="32%" alt="Always Organic: public homepage excerpt" /></a>
+  <a href="assets/organic-cart.jpg"><img src="assets/organic-cart.jpg" width="63%" alt="Always Organic: empty shopping bag" /></a>
+</p>
+
+<sub>Home · Empty shopping bag. Actual public interface captures; no purchase or populated cart is implied. Open an image for detail.</sub>
 
 **Evidence:** source-reviewed design and public web captures; existing component tests were not run in this review.
 
