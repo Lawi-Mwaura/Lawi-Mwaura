@@ -4,9 +4,17 @@
 
 [Profile](../README.md) · [Documentation index](README.md) · [Maly](maly.md)
 
-![I-soco discovery interface](../assets/isoco-discovery.jpg)
+![I-soco product discovery](../assets/isoco-discovery.jpg)
 
-*Actual discovery interface excerpt. Seller identities, amounts, and commercial details are excluded.*
+[Problem](#problem-statement) · [System design](#system-design) · [Gallery](#web-interface-gallery) · [Evidence](#metrics-and-evidence)
+
+## Problem statement
+
+External callbacks can repeat, arrive late, and conflict with a previous result. The application needs one consistent persisted outcome and a useful recovery path when completion is uncertain.
+
+## Technologies used
+
+TypeScript · Next.js · React · Supabase · PostgreSQL
 
 ## Engineering scope
 
@@ -22,22 +30,15 @@ I-soco combines a Next.js web interface with Supabase services and PostgreSQL. T
 
 ## System design
 
-```mermaid
-flowchart TB
-    UI[Next.js web interface] --> AUTH[Authentication and request validation]
-    AUTH --> SVC[Server and edge functions]
-    EXT[External provider] --> VERIFY[Callback verification]
-    VERIFY --> REC[Reconciliation]
-    SVC --> REC
-    REC --> DB[(PostgreSQL transactional state)]
-    DB --> STATE[Status and recovery response]
-    STATE --> UI
-    DB --> EVENTS[Notification event records]
-```
+**Component architecture.** The boxes identify technologies and responsibilities; boundaries group the application runtime and managed backend. Relationships show dependencies and integration protocols, rather than a step-by-step processing flow.
+
+![isoco application components and labelled backend dependencies](../assets/isoco-architecture.svg)
 
 *Simplified responsibility map. It omits proprietary entities, endpoint names, commercial rules, and deployment details.*
 
 The browser displays state; the trusted server path verifies external information; the database applies changes within a transaction. This boundary matters because a redirect or an optimistic screen update cannot establish that an external operation completed.
+
+## Challenges and engineering decisions
 
 ### 1. Repeated events must converge
 
@@ -67,15 +68,27 @@ The browser displays state; the trusted server path verifies external informatio
 
 **Invariant:** the interface should report what the system knows and offer a next step that matches that state.
 
-![I-soco shopping updates interface](../assets/isoco-notifications.jpg)
-
-*Actual notification interface excerpt showing generic verification and support updates. The surrounding commercial content is excluded.*
-
 ### 4. Access and release boundaries are part of correctness
 
 Privileged mutations stay behind trusted server operations. The source includes a security migration that restricts browser table access and a redirect allowlist for the external integration.
 
 Database changes and edge-function code also have to agree. A deployment compatibility gate checks those pieces together, rather than assuming that shipping application code is sufficient.
+
+## Outcomes
+
+- Transactional coordination and uniqueness protect against repeated durable effects.
+- Guarded transitions preserve confirmed state when a contradictory event arrives.
+- Recovery responses distinguish unresolved, confirmed, and terminal failure states.
+
+These are implementation outcomes supported by the reviewed source, not measured production improvements.
+
+## Metrics and evidence
+
+| Measure | Evidence |
+| :--- | :--- |
+| Selected regression tests | **13 passed** on 1 October 2026. |
+| Test scope | Reliability helpers and source contracts; live-provider and concurrent database behavior were not established. |
+| Production metrics | No verified latency, throughput, availability, or user-impact figures supplied. |
 
 ## Validation
 
@@ -91,6 +104,36 @@ The following are evaluation priorities, not claimed production measurements:
 - **Recovery:** track unresolved event age, replay frequency, and failures by processing stage.
 - **Delivery:** exercise migration/function compatibility in a staging environment before promotion.
 - **Observability:** correlate an attempt across request, callback, reconciliation, and persisted outcome without logging customer payloads.
+
+## Web interface gallery
+
+The captures below come from the application's existing browser QA screenshots. They show interface states from those source revisions, not a claim about the current production deployment. Excerpts exclude private identities, amounts, and commercial rules. Authentication fields show an example placeholder; the support form uses a QA example address.
+
+### 01 · Product discovery
+
+![Product discovery with real product imagery](../assets/isoco-discovery.jpg)
+
+Search, navigation, and actual product cards. The crop stops before private commercial details.
+
+### 02 · Account entry and creation
+
+<table><tr><th>Sign-in · phone entry</th><th>Account creation · phone entry</th></tr><tr><td width="50%"><img src="../assets/isoco-signin.jpg" width="100%" alt="I-soco phone sign-in interface with an example placeholder." /></td><td width="50%"><img src="../assets/isoco-signup.jpg" width="100%" alt="I-soco account creation interface with an example placeholder." /></td></tr></table>
+
+### 03 · Notification and unavailable-data states
+
+![Generic verification and support notifications](../assets/isoco-notifications.jpg)
+
+Generic verification and support updates; surrounding commercial content is omitted.
+
+![Unavailable ticket data with a clear recovery message](../assets/isoco-recovery.jpg)
+
+A truthful unavailable-data state keeps the workspace available without pretending that records loaded.
+
+### 04 · Support request composition
+
+![Support form excerpt with a QA example email and request fields](../assets/isoco-support.jpg)
+
+Request context, optional reference, and explicit contact consent. Phone fields and user identity are outside the excerpt.
 
 ## Technical discussion
 

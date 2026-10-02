@@ -1,63 +1,102 @@
-<p align="left">
-  <img src="assets/lawi-mwaura.svg" width="100%" alt="Lawi Mwaura. Full-stack and mobile engineering. Web platforms, mobile applications, and the systems behind them." />
-</p>
+# Lawi Mwaura
 
-I’m **Lawi Mwaura**, a full-stack and mobile engineer based in Kenya. My flagship projects, **I-soco** and **Maly**, tackle repeated external events, interrupted data ingestion, and session isolation.
+**Full-stack & mobile engineer · Kenya**
 
-**TypeScript · Next.js · React Native · PostgreSQL**
+TypeScript · Next.js · React Native · PostgreSQL
 
-**Open to senior full-stack and product engineering roles at startups.**
+I build web and mobile applications with particular attention to what happens when requests repeat, data ingestion stops, or a session changes. **I-soco** and **Maly** are my flagship projects; their case studies explain the implementation, failure cases, and verification behind the interfaces.
 
-[Email](mailto:lawimwaura@gmail.com) · [Engineering documentation](case-studies/README.md)
+**Seeking senior full-stack and product engineering roles at startups.**
 
-## 01 / I-soco
+[Email me](mailto:lawimwaura@gmail.com) · [Technical documentation](case-studies/README.md) · [Public source: Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber)
 
-**A marketplace application with a focus on reliable asynchronous workflows.**
+## Technologies used
 
-<a href="https://github.com/Lawi-Mwaura/I-soco-showcase"><img src="assets/isoco-discovery.jpg" width="100%" alt="I-soco discovery interface: search, navigation, and a row of product cards. Sanitized interface excerpt." /></a>
+| Area | Technologies used in these projects |
+| :--- | :--- |
+| Web | TypeScript, React, Next.js, Tailwind CSS |
+| Mobile | React Native, Expo, Expo Router |
+| Data & state | PostgreSQL, Supabase, Neon, TanStack Query, Zustand |
+| Integrations & quality | Resend, Zod, Vitest, Jest, Node test runner |
 
-<sub>Actual interface excerpt. Seller identities, amounts, and commercial details are excluded.</sub>
+## Selected engineering work
 
-The difficult part is keeping the interface and persisted state consistent when external events repeat, arrive late, or contradict an earlier result. The implementation uses server-side verification, database transactions, row locking, and deduplication to protect state transitions.
+### 01 · I-soco — reliable asynchronous workflows
 
-**Engineering focus:** idempotency · reconciliation · access boundaries · recovery UX · coordinated releases
+[![I-soco product discovery interface](assets/isoco-discovery.jpg)](https://github.com/Lawi-Mwaura/I-soco-showcase)
 
-**Stack:** TypeScript, Next.js, React, Supabase, PostgreSQL
+<sub>Actual web interface with real product images. Sanitized excerpt; private commercial details are excluded.</sub>
 
-**Validation:** 13 selected reliability and security checks passed. The case study explains what those checks establish and what still needs live-system verification.
+**Problem statement.** External events can repeat, arrive late, or contradict an earlier response. Persisted state and the user interface must converge without applying a durable effect twice.
 
-**[Read the system design →](https://github.com/Lawi-Mwaura/I-soco-showcase)**
+**Technologies.** TypeScript · Next.js · React · Supabase · PostgreSQL
 
-## 02 / Maly
+| Challenge | System design decision | Implemented outcome |
+| :--- | :--- | :--- |
+| Duplicate events and concurrent writes | Transactional updates, row locks, event and effect uniqueness | Replays follow an already-applied path. |
+| Late or contradictory responses | Server verification and guarded state transitions | Confirmed state is protected from downgrade. |
+| Timeouts and incomplete operations | Reconciliation and explicit recovery states | The interface distinguishes uncertainty from a terminal result. |
 
-**A mobile personal finance application with on-device transaction ingestion.**
+<details>
+<summary><strong>System architecture · Next.js and Supabase</strong></summary>
+
+![I-soco architecture with Supabase Auth, Edge Functions, PostgreSQL and Storage](assets/isoco-architecture.svg)
+
+**Tradeoff:** database coordination keeps correctness in one boundary, but can introduce contention. Lock waits and reconciliation latency should be measured before changing that boundary.
+
+</details>
+
+**Metrics & evidence.** **13 selected tests passed** for reliability, recovery, security contracts, and release compatibility. These are regression checks; production latency, throughput, and availability have not been established by this review.
+
+**[Read the engineering case study →](https://github.com/Lawi-Mwaura/I-soco-showcase)**
+
+### 02 · Maly — mobile ingestion and session isolation
 
 <p align="center">
-  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-welcome.jpg" width="38%" alt="Maly welcome screen, captured from the actual interface in an isolated portfolio preview." /></a>
+  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-welcome-native.png" width="38%" alt="Maly welcome screen running in an Android phone emulator." /></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-budget.jpg" width="38%" alt="Maly spending plan screen with clearly labeled sample data." /></a>
+  <a href="https://github.com/Lawi-Mwaura/Maly-showcase"><img src="assets/maly-budget-native.png" width="38%" alt="Maly spending plan running in an Android phone emulator with labeled sample data." /></a>
 </p>
 
-<sub>Actual application components rendered in an isolated preview. All financial values are sample data.</sub>
+<sub>Native Android emulator captures of actual application components. Sample data and isolated backend fixtures.</sub>
 
-The engineering challenge is turning inconsistent device messages into useful records while handling interruptions, repeated inputs, authentication, and local state. Parser fixtures, paginated inbox recovery, deduplication, and explicit cleanup make those boundaries testable.
+**Problem statement.** Device messages are inconsistent, inbox reads can stop midway, and cached financial data must be cleared when sessions change.
 
-**Engineering focus:** parsing · resumable ingestion · local state · session isolation · mobile authentication
+**Technologies.** TypeScript · React Native · Expo · Supabase · TanStack Query · Zustand
 
-**Stack:** TypeScript, React Native, Expo, Supabase, TanStack Query, Zustand
-
-**Validation:** 55 tests passed across parser, inbox recovery, user-state cleanup, authentication, and PIN storage suites, using fixtures and mocked device boundaries.
-
-**[Read the system design →](https://github.com/Lawi-Mwaura/Maly-showcase)**
-
-## Supporting projects
-
-| Project | Engineering focus | Technologies |
+| Challenge | System design decision | Implemented outcome |
 | :--- | :--- | :--- |
-| [Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber) | Validated enquiries, durable storage, notification failure handling. | TypeScript, Next.js, React, PostgreSQL, Vitest |
-| [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase) | Public forms, content workflows, administrative access boundaries. | TypeScript, Next.js, React, Supabase, Resend, Tiptap |
-| [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase) | Storefront state, data queries, runtime input validation. | TypeScript, Next.js, React, Supabase, TanStack Query, Zod |
+| Inconsistent or unrelated messages | Recognition, normalization, and parser fixtures | Supported transactions are separated from unrelated messages. |
+| Interrupted and repeated inbox reads | Paginated scanning, overlap, deduplication, guarded cursor advancement | Failed reads preserve the previous scan cursor. |
+| Stale state across sessions | Explicit cleanup of queues, user storage, and query cache | Data cleanup has a separate lifecycle from authentication and PIN state. |
 
-Shenachafiber also provides inspectable source and **27 passing tests** across validation, notification formatting, and enquiry-route suites. The case studies explain failure conditions, invariants, implementation choices, and remaining operational questions.
+<details>
+<summary><strong>System architecture · Expo and Supabase</strong></summary>
 
-I-soco, Maly, Catherine Gathoni, and Always Organic have private source repositories. Shenachafiber provides public source. The case studies cover engineering decisions and sanitized interfaces; proprietary commercial logic is omitted.
+![Maly native architecture with Supabase Auth, PostgreSQL and device persistence](assets/maly-architecture.svg)
+
+**Tradeoff:** bounded scans limit device work; page-cap exhaustion needs further validation before claiming complete ingestion of any inbox size. Overlap requires reliable deduplication.
+
+</details>
+
+**Metrics & evidence.** **55 tests passed across five selected suites:** parsing, inbox recovery, user-state cleanup, authentication routing, and PIN storage. Device and storage boundaries are mocked in these tests; emulator images demonstrate native rendering, not end-to-end ingestion or production performance.
+
+**[Read the engineering case study →](https://github.com/Lawi-Mwaura/Maly-showcase)**
+
+## More project work
+
+| Project | Problem & implemented outcome | Technologies | Evidence |
+| :--- | :--- | :--- | :--- |
+| [Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber) | Enquiries must survive notification failures. Storage determines success; delivery errors are handled separately. | Next.js, TypeScript, React, Neon / PostgreSQL, Resend, Vitest | Public source; **27 tests passed** across three selected suites. |
+| [Catherine Gathoni](https://github.com/Lawi-Mwaura/Catherine-Gathoni-showcase) | Public forms and administration need different trust boundaries. Input validation, persistence-first contact handling, and server-side admin checks. | Next.js, TypeScript, React, Tailwind CSS, Supabase, Resend, Tiptap, Zod, Sentry | Source-reviewed design and public web captures; no complete test run in this review. |
+| [Always Organic](https://github.com/Lawi-Mwaura/Always-Organic-showcase) | Storefront state and external-service results need separate lifecycles. Cart state, server queries, runtime validation, and empty-state behavior. | Next.js, TypeScript, React, Tailwind CSS, Supabase, TanStack Query, Zod, Resend, Framer Motion | Source-reviewed design and public web captures; existing component tests were not run in this review. |
+
+Each project README includes interface screenshots, a system diagram, challenges, outcomes, and a clearly scoped evidence section.
+
+## Technical conversations
+
+The case studies support discussions about **idempotency, database transactions, state machines, recovery UX, ingestion correctness, authentication boundaries, and partial failure**. Test counts describe selected runs on **1 October 2026**, not production impact. Production usage, business outcomes, and team leadership are not asserted without supporting evidence.
+
+I-soco, Maly, Catherine Gathoni, and Always Organic retain private source repositories. Their public repositories contain sanitized technical documentation and screenshots. Shenachafiber provides public source. Proprietary commercial logic is omitted.
+
+**[Get in touch](mailto:lawimwaura@gmail.com)**
