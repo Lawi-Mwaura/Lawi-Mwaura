@@ -8,7 +8,7 @@ I build web applications, APIs and mobile products, with engineering experience 
 
 **Seeking mid-level full stack engineering roles.**
 
-[Email me](mailto:lawimwaura@gmail.com) · [Technical documentation](case-studies/README.md) · [Public source: Shenachafiber](https://github.com/Lawi-Mwaura/shenachafiber)
+[Email me](mailto:lawimwaura@gmail.com) · [Technical documentation](case-studies/README.md) 
 
 <details>
 <summary><strong>All technologies & tools</strong> · web, native Android, backend, cloud, testing and monitoring</summary>
@@ -182,10 +182,5 @@ Each project README includes interface screenshots, a system diagram, challenges
 - **Moringa School:** Software Engineering Bootcamp, graduated 2023.
 - **Jomo Kenyatta University of Agriculture and Technology:** Bachelor's degree in Journalism, graduated 2026; Manufacturing and Mechanical Engineering coursework, 2019 to 2022.
 
-## Technical conversations
-
-The case studies support discussions about **idempotency, database transactions, state machines, recovery UX, ingestion correctness, authentication boundaries, and partial failure**. Test counts describe selected runs on **1 October 2026**, not production impact. Production usage, business outcomes, and team leadership are not asserted without supporting evidence.
-
-I-soco, Maly, Catherine Gathoni, and Always Organic retain private source repositories. Their public repositories contain sanitized technical documentation and screenshots, with links to the original private repositories for authorized collaborators. Shenachafiber provides public source. Proprietary commercial logic is omitted.
 
 **[Get in touch](mailto:lawimwaura@gmail.com)**
